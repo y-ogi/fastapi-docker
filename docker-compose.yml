@@ -1,0 +1,11 @@
+version: '3'
+services:
+  fastapi:
+    restart: always
+    build: .
+    container_name: 'fastapi'
+    working_dir: '/root'
+    volumes:
+      - ${SRC_PATH}:/root/app
+    ports: 
+      - "8000:8000"
